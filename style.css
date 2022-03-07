@@ -1,0 +1,34 @@
+body { background: #262626; }
+svg {
+  width: 100vmin;
+  height: 100vmin;
+  transform: translate(calc(50vw - 50vmin), calc(50vh - 50vmin));
+}
+
+path {
+  fill: none;
+  stroke: whitesmoke;
+  stroke-width: 20;
+  transform-origin: center center;
+  animation: load 1s ease-in-out infinite;
+}
+
+.slash { animation-name: slash; }
+.lt { animation-name: lt; }
+.gt { animation-name: gt; animation-delay: -.5s; }
+
+
+@keyframes slash {
+  0%, 30% { transform: none; }
+  50%, 60% { transform: rotate(-28.868deg); }
+}
+
+@keyframes lt {
+  0%, 30% { transform: none; }
+  50%, 60% { transform: translateX(-5px); }
+}
+
+@keyframes gt {
+  0%, 30% { transform: none; }
+  50%, 60% { transform: translateX(5px); }
+}
